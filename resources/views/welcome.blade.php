@@ -8,6 +8,14 @@
     <title>Inicio</title>
 </head>
 <body>
-<h1>Inicio</h1>
+<h1>Menu</h1>
+<ul>
+    <li><a href="<?= route('home') ?>">Home</a></li>
+    <li><a href="<?= route('blog') ?>">Blog</a></li>
+    <li><a href="<?= route('about') ?>">About</a></li>
+    <li><a href="<?= route('contact') ?>">Contacto</a></li>
+</ul>
+
+
 </body>
 </html>
