@@ -1,0 +1,36 @@
+*Clase 1*
+Estructuras de carpetas en laravel:
+
+FOLDER APP:
+Esta carpeta contiene el codigo fuente de la aplicacion y casi todas sus clases
+
+ - CONSOLE: se guardan los comandos que se crean en medio del desarrollo.
+
+ - EXCEPTIONS: administrador de excepciones de errores de nuestra aplicacion.
+
+ - HTTP: contiene controladores, middleware y kernels
+
+ - MODELS: se guardan los modelos de eloquent para interactuar con la BD
+
+ - PROVIDERS: servicios de directorios y los uqe creemos nosotros.
+
+BOOTSTRAP: tiene el archivo app.php que es quein inicia el framework, contiene la carpeta cash que contiene archivos ya generado por laravel paraoptimizar procesos (caché?)
+
+CONFIG: Contiene configuraciones de la aplicacion,
+
+DATABASE: se guardar los factorys, migraciones y seeders (semilleros).
+
+LANG: Archivos de traduccion.
+
+PUBLIC: contiene archivos index.php (punto inicial de las aplicaciones), configura el autocargado de las clases, es el unico que se puede acceder de forma publica, adicional contiene imagenes, css y otros recursos publicos, archivos javascripts
+ - Resources: archivos no compilados que al ser compilados se trasladan a la carpeta public.
+
+ROUTES: aqui se guardan las rutas, canales de transmision entre otrs cosas.
+
+STORAGE: contiene archivos generados por la aplicaciones, (logs, vistas, sesiones, etc)
+
+TEST: De pruebas
+
+VENDOR: contiene todas las dependencias de composer y no se debe tocar o modificar, solo para consultar.
+
+
