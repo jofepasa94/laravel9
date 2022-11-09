@@ -9,5 +9,6 @@
 </head>
 <body>
 <h1>Acerca de mi</h1>
+@include('partials.navigation')
 </body>
 </html>
