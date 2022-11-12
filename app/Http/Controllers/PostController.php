@@ -1,18 +1,15 @@
 <?php
 
+
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
+
 
 class PostController
 {
     public function index()
     {
-        $posts=[
-            ['title'=>'First Post'],
-            ['title'=>'Second Post'],
-            ['title'=>'Third Post'],
-            ['title'=>'Fourth Post']
-
-        ];
+        $posts= DB::table('post')->get();
         return view('blog', ['posts'=>$posts]);
     }
 }
