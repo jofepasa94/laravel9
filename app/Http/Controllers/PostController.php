@@ -33,6 +33,8 @@ class PostController
         $post->body = $request->input('body');
         $post->save();
 
+        session()->flash('status', 'Post Created!');
+
         return to_route('posts.index');
 
     }
