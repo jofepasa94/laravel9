@@ -11,6 +11,15 @@
                 {{ $post->title }}
             </a>
         </h2>
+
+        <div style="display: flex; align-items: baseline">
+            <h2>
+                <a href="{{route('posts.show', $post)}}">
+                    {{$post->body}}
+                </a>
+            </h2>
+            <a href="{{route('posts.edit', $post)}}">   Editar</a>
+        </div>
     @endforeach
 </x-layouts.app>
 
