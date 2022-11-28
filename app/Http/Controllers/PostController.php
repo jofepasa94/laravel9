@@ -49,8 +49,20 @@ class PostController
         return view('posts.edit', ['post'=> $post]);
     }
 
-    public function update()
+    public function update(Request $request, Post $post)
     {
-        return 'Actualizado';
+        $request->validate([
+            'title' => ['required'],
+            'body' => ['required']
+        ]);
+
+
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->save();
+
+        session()->flash('status', 'Post Updated!');
+
+        return to_route('posts.show', $post);
     }
 }
